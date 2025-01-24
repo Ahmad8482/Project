@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0%;
+      padding: 0%;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: sans-serif;
+    }
+    /* @media only screen and (max-width: 786) {
+      body {
+        font-size: medium;
+      }
+    } */
+    .upflex1 {
+      background-color: lightblue;
+    }
+    .flex1 {
+      display: flex;
+      width: 65%;
+      margin: auto;
+      justify-content: center;
+      justify-items: center;
+      gap: 40px;
+      align-items: center;
+      color: white;
+    }
+    @media only screen and (max-width: 768px) {
+      .flex1 {
+        width: 90%;
+      }
+      .flex1 .flex12 h1 {
+        font-size: 36px;
+      }
+      /* .flex1 div img {
+        /* width: 2px; */
+      /* } */
+    }
+    .flex1 p {
+      font-size: larger;
+    }
+    .flex1 div img {
+      width: 350px;
+      height: 450px;
+    }
+
+    .flex1 p {
+      line-height: 25px;
+    }
+    .flex1 button {
+      background-color: #f1c50d;
+      padding: 15px 30px;
+      border-radius: 30px;
+      border: 1px solid #f1c50d;
+      margin-top: 30px;
+      color: white;
+    }
+    .flex1 h1 {
+      font-size: 50px;
+      padding-bottom: 20px;
+    }
+    .flex12 {
+      width: 40%;
+    }
+    .flex2 {
+      display: flex;
+      justify-content: center;
+      justify-items: center;
+      align-items: center;
+      font-size: x-large;
+      width: 70%;
+      margin: auto;
+      gap: 60px;
+      background-color: #2dba6a;
+      color: white;
+      padding-bottom: 50px;
+    }
+
+    .flex2 h2 {
+      font-size: 35px;
+      /* padding: 10px 0px 20px 0px; */
+    }
+    .flex2 p {
+      font-weight: bold;
+      padding: 40px 0px 20px 0px;
+    }
+    .flex2 div {
+      width: 30%;
+    }
+    .flex2 img {
+      border-radius: 200px;
+      /* padding-bottom: 80px; */
+    }
+    .flex2 ul {
+      line-height: 35px;
+      padding-top: 200px;
+      list-style: none;
+    }
+    li span {
+      font-weight: bolder;
+      font-size: larger;
+      color: rgb(9, 125, 219);
+    }
+
+    @media only screen and (max-width: 768px) {
+      .flex21 h2 {
+        font-size: 30px;
+      }
+      .flex21 p {
+        font-size: large;
+      }
+
+      .flex2 {
+        gap: 25px;
+        width: 90%;
+        margin: auto;
+      }
+      .flex2 div {
+        width: 440px;
+        font-size: 20px;
+      }
+      .flex2 ul {
+        font-size: 15px;
+        width: 50%;
+        line-height: 50px;
+      }
+      .flex21 {
+        width: 250px;
+      }
+    }
+    #flex3 {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      width: 70%;
+      margin: auto;
+      /* justify-content: center;
+      justify-items: center;
+      align-items: center; */
+      gap: 10px;
+      margin-bottom: 50px;
+    }
+    @media only screen and (max-width: 786px) {
+      #flex3 {
+        display: grid;
+        gap: 20px;
+        column-gap: 10px;
+        grid-template-columns: auto auto;
+        width: 90%;
+        margin: auto;
+      }
+      section .upblock {
+        width: 90%;
+        margin: auto;
+      }
+    }
+    .upblock {
+      width: 70%;
+      margin: auto;
+      line-height: 40px;
+      padding: 20px 0px;
+    }
+    .block {
+      padding: 20px;
+      background-color: rgb(233, 232, 232);
+      display: flex;
+      justify-content: center;
+      justify-items: center;
+      align-items: start;
+      /* gap: 10px; */
+      width: 90%;
+
+      padding-bottom: 40px;
+      /* grid-template-columns: 10% auto; */
+    }
+
+    .block h5 {
+      font-size: 17px;
+      padding-bottom: 10px;
+    }
+    .block > p {
+      background-color: #f1c50d;
+      padding: 0px;
+      border-radius: 30px;
+      font-size: x-large;
+      width: 20%;
+      text-align: center;
+    }
+
+    .block div p {
+      line-height: 25px;
+    }
+    .flex4 {
+      display: flex;
+      justify-content: center;
+      /* justify-items: baseline; */
+      gap: 20px;
+      align-items: normal;
+      width: 68%;
+      margin: auto;
+      margin-bottom: 40px;
+    }
+    .flex41 {
+      line-height: 25px;
+      width: 70%;
+    }
+    .upflex4 {
+      width: 70%;
+      margin: auto;
+      line-height: 40px;
+    }
+    @media only screen and (max-width: 786px) {
+      .flex4 {
+        display: block;
+        width: 80%;
+      }
+      .upflex4 {
+        width: 90%;
+        margin: auto;
+      }
+      .flex4 img {
+        float: right;
+        width: 60%;
+        height: 400px;
+        padding-bottom: 40px;
+        /* margin-top: 0px; */
+        /* padding-top: 0px; */
+        /* clear: both;?\ */
+      }
+    }
+    .flex5 {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      /* column-gap: 10px; */
+      row-gap: 50px;
+      width: 68%;
+      margin: auto;
+      margin-bottom: 50px;
+    }
+    .flex52 {
+      width: 85%;
+    }
+    @media only screen and (max-width: 786px) {
+      .flex5 {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 20px;
+        width: 80%;
+        margin: auto;
+        margin-bottom: 30px;
+      }
+    }
+    .flex52 h4 {
+      padding: 20px 20px 15px 15px;
+    }
+    .flex52 p {
+      padding-left: 15px;
+      line-height: 25px;
+    }
+    .flex52 button {
+      margin-left: 15px;
+      margin-top: 10px;
+      padding: 10px 25px;
+      background-color: #f1c50d;
+      border: 1px solid #f1c50d;
+      border-radius: 20px;
+      font-weight: bold;
+      color: white;
+    }
+    .pos {
+      position: relative;
+    }
+    .pos2 {
+      position: absolute;
+      bottom: 15px;
+      left: 10px;
+      background-color: white;
+      padding: 05px;
+      border-radius: 25px;
+    }
+
+    .flex7 {
+      display: flex;
+      /* justify-content: center; */
+
+      width: 80%;
+      margin: auto;
+      flex-wrap: wrap;
+      gap: 60px;
+      align-items: center;
+      color: white;
+    }
+
+    .flex72 {
+      width: 180px;
+      flex: 1 0 20%;
+    }
+    @media only screen and (max-width: 786px) {
+      .flex72 {
+        flex: 1 0 30%;
+      }
+    }
+    .flex72 p {
+      line-height: 20px;
+      font-size: small;
+    }
+    .flex72 img {
+      border-radius: 60px;
+    }
+    .flex72 h5 {
+      font-size: large;
+    }
+    .bottom {
+      background-image: url(images/image/img_4.jpg);
+      background-size: cover;
+      text-align: center;
+      padding: 120px;
+    }
+    .bottom1 {
+      background-color: white;
+      padding: 20px;
+      width: 40%;
+      margin: auto;
+      font-size: x-large;
+    }
+    @media only screen and (max-width: 786px) {
+      .bottom1 {
+        width: 60%;
+        margin: auto;
+      }
+    }
+    .bottom1 h3 {
+      color: #2dba6a;
+      padding-bottom: 20px;
+    }
+    .footer {
+      background-color: rgb(61, 60, 60);
+      line-height: 70px;
+      text-align: center;
+      color: white;
+      padding: 30px 0px 0px 0px;
+    }
+  </style>
+  <body>
+    <div class="upflex1">
+      <header class="flex1">
+        <div>
+          <img src="images/image/img_!.png" alt="Picture" />
+        </div>
+        <div class="flex12">
+          <h1>We're Always Ready To Help</h1>
+          <p>
+            The Clinin provides diagnosis and management of pain in the head,
+            face, mouth and teeth
+          </p>
+          <button>CONTACT US</button>
+        </div>
+      </header>
+    </div>
+    <div style="background-color: #2dba6a">
+      <section class="flex2">
+        <div class="flex21">
+          <p>Why Choose Us</p>
+          <h2>We Have Patients Being Monitored by Doctors!</h2>
+          <p>How it work?</p>
+          <img
+            src="images/image/img_2.jpg"
+            alt="Picture"
+            width="250px"
+            height="250px"
+          />
+        </div>
+        <ul>
+          <li><span> &#10132;</span>Fitness Guidance to Patient.</li>
+          <li><span> &#10132;</span>Building a healthy environment.</li>
+          <li><span> &#10132;</span>Diabetes & blood pressor check up</li>
+          <li><span> &#10132;</span>Handle patient body in MRI.</li>
+          <li><span> &#10132;</span>Excellence in Healthcare every.</li>
+        </ul>
+      </section>
+    </div>
+    <section>
+      <div class="upblock">
+        <p style="font-weight: bold">Departments</p>
+        <h2 style="color: #2dba6a">Dentists are Specialists</h2>
+        <p>
+          We have gathered only qualified specialists with extensive rience you
+          for free you with any problem!
+        </p>
+      </div>
+      <nav id="flex3">
+        <div class="block">
+          <p>&#x2714;</p>
+          <div>
+            <h5>Large network of clinics</h5>
+            <p>Sample text. Click to select the Text Element</p>
+          </div>
+        </div>
+        <div class="block">
+          <p>&#x2714;</p>
+          <div>
+            <h5>Professional dentists</h5>
+            <p>Sample text. Click to select the Text Element</p>
+          </div>
+        </div>
+        <div class="block">
+          <p>&#x2714;</p>
+          <div>
+            <h5>Durable materials</h5>
+            <p>Sample text. Click to select the Text Element</p>
+          </div>
+        </div>
+      </nav>
+    </section>
+    <section>
+      <div class="upflex4" style="">
+        <p style="font-weight: bold">Faq</p>
+        <h2 style="padding-bottom: 20px; color: #2dba6a">
+          Frequently Asked Question
+        </h2>
+      </div>
+      <div class="flex4">
+        <div class="flex41">
+          <p style="padding-bottom: 20px; color: #2dba6a; font-weight: bold">
+            01.You need a medical services?
+          </p>
+          <p>
+            Answer.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Curabitur id suscipit ex. Suspendisse rhoncus laoreet purus quis
+            elementum. Phasellus sed efficitur dolor, et ultricies sapien.
+            Quisque fringilla sit amet dolor commodo efficitur. Aliquam et sem
+            odio. In ullamcorper nisi nunc, et molestie ipsum iaculis sit amet.
+          </p>
+          <p style="font-weight: bold; padding-top: 30px">
+            02.Medical services a scam?
+          </p>
+          <p style="font-weight: bold; padding-top: 20px">
+            03.Out of your medical services>
+          </p>
+        </div>
+        <img
+          src="images/image/img_3.jpg"
+          alt="Picture"
+          width="50%"
+          height="350px"
+          style="margin-top: 45px"
+        />
+      </div>
+    </section>
+    <section class="flex5">
+      <div class="flex52">
+        <div class="pos">
+          <img
+            src="images/image/img_4.jpg"
+            alt="Picture"
+            width="280px"
+            height="150px"
+          />
+          <img
+            src="images/icons/icon_1.png"
+            alt=" Picture"
+            width="50px"
+            class="pos2"
+          />
+        </div>
+        <h4>Laboratory Analysis</h4>
+        <p>Sample text.Click to select the Text Element</p>
+        <button>READ MORE</button>
+      </div>
+      <div class="flex52">
+        <div class="pos">
+          <img
+            src="images/image/img_5.jpg"
+            alt="Picture"
+            width="280px"
+            height="150px"
+          />
+          <img
+            src="images/icons/icon_2.png"
+            alt=" Picture"
+            width="50px"
+            class="pos2"
+          />
+        </div>
+        <h4>Laboratory Analysis</h4>
+        <p>Sample text.Click to select the Text Element</p>
+        <button>READ MORE</button>
+      </div>
+      <div class="flex52">
+        <div class="pos">
+          <img
+            src="images/image/img_6.jpg"
+            alt="Picture"
+            width="280px"
+            height="150px"
+          />
+          <img
+            src="images/icons/icon_3.png"
+            alt=" Picture"
+            width="50px"
+            class="pos2"
+          />
+        </div>
+        <h4>Laboratory Analysis</h4>
+        <p>Sample text.Click to select the Text Element</p>
+        <button>READ MORE</button>
+      </div>
+      <div class="flex52">
+        <div class="pos">
+          <img
+            src="images/image/img_7.jpg"
+            alt="Picture"
+            width="280px"
+            height="150px"
+          />
+          <img
+            src="images/icons/icon_4.png"
+            alt=" Picture"
+            width="50px"
+            class="pos2"
+          />
+        </div>
+        <h4>Laboratory Analysis</h4>
+        <p>Sample text.Click to select the Text Element</p>
+        <button>READ MORE</button>
+      </div>
+      <div class="flex52">
+        <div class="pos">
+          <img
+            src="images/image/img_8.jpg"
+            alt="Picture"
+            width="280px"
+            height="150px"
+          />
+          <img
+            src="images/icons/icon_5.png"
+            alt=" Picture"
+            width="50px"
+            class="pos2"
+          />
+        </div>
+        <h4>Laboratory Analysis</h4>
+        <p>Sample text.Click to select the Text Element</p>
+        <button>READ MORE</button>
+      </div>
+      <div class="flex52">
+        <div class="pos">
+          <img
+            src="images/image/img_9.jpg"
+            alt="Picture"
+            width="280px"
+            height="150px"
+          />
+          <img
+            src="images/icons/icon_6.png"
+            alt=" Picture"
+            width="50px"
+            class="pos2"
+          />
+        </div>
+        <h4>Laboratory Analysis</h4>
+        <p>Sample text.Click to select the Text Element</p>
+        <button>READ MORE</button>
+      </div>
+    </section>
+    <section
+      style="
+        background-color: #2dba6a;
+        text-align: center;
+        color: white;
+        line-height: 35px;
+        padding: 50px;
+      "
+    >
+      <p>Working Process</p>
+      <h1>How We Work?</h1>
+      <p style="line-height: 20px; padding-bottom: 30px; font-size: small">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        <br />
+        tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+      <div class="flex7">
+        <div class="flex72">
+          <img
+            src="images/image/img_2.jpg"
+            alt="Picture"
+            width="120px"
+            height="120px"
+          />
+          <h5>Appointment</h5>
+          <p>Sample text. Click select the text Element</p>
+        </div>
+        <div class="flex72">
+          <img
+            src="images/image/img_7.jpg"
+            alt="Picture"
+            width="120px"
+            height="120px"
+          />
+          <h5>Expert Doctor</h5>
+          <p>Sample text. Click select the text Element</p>
+        </div>
+        <div class="flex72">
+          <img
+            src="images/image/img_10.jpg"
+            alt="Picture"
+            width="120px"
+            height="120px"
+          />
+          <h5>Consultation</h5>
+          <p>Sample text. Click select the text Element</p>
+        </div>
+        <div class="flex72">
+          <img
+            src="images/image/img_6.jpg"
+            alt="Picture"
+            width="120px"
+            height="120px"
+          />
+          <h5>Enjoy Life</h5>
+          <p>Sample text. Click select the text Element</p>
+        </div>
+      </div>
+    </section>
+    <section class="bottom">
+      <div class="bottom1">
+        <h3>Contacts</h3>
+        <p>monday - friday</p>
+        <p><b> 8.00</b>am - <b> 8.00</b>pm</p>
+        <p>call us <b>(111)252 3366</b></p>
+      </div>
+    </section>
+    <section class="footer">
+      <footer>Sample text.Click to select the Text Element</footer>
+      <footer>
+        <a href="#" style="color: lightblue">Website Templates</a> created with
+        <a href="#" style="color: lightblue">Website Builder Software</a>
+      </footer>
+    </section>
+  </body>
+</html>
